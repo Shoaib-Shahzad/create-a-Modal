@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #E0DECA;
+  font-family: 'Azeret Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease-in-out;
+}
+.btn{
+  background-color: #89CFFD;
+  padding: 10px 40px;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+.container{
+  background: black;
+  color: white;
+  width: 560px;
+  max-width: 89%;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  transform: translateY(-100%);
+  transition: all .3s ease-in-out;
+  
+}
+h2{
+  margin-bottom: 10px;
+}
+p{
+  margin-bottom: 20px;
+  line-height:1.5 ;
+}
+.action{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.close:hover{
+  color: red;
+}
+.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.main.active .container{
+  transform: translateY(0px);
+}
+#target:hover{
+  background: #39CFFD;
+  border: 1px solid #89CFFD;
+}
